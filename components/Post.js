@@ -15,7 +15,7 @@ function Post({
             <p className="text-sm font-meduim">{name}</p>
             {timestamp ? (
               <p className="text-xs text-gray-500">{new Date(timestamp?.toDate()).toUTCString()}</p>) :(
-                  <p className="text-xs text-gray-400">loading..</p>
+                  <p className="text-xs text-gray-500">loading..</p>
               )
             }
           
