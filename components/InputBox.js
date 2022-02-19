@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import Image from 'next/image'
 import {useSession} from 'next-auth/react'; 
-import {EmojiHappyIcon} from '@heroicons/react/outline'
-import {CameraIcon, VideoCameraIcon} from "@heroicons/react/solid";
+import {EmojiHappyIcon, ChevronRightIcon} from '@heroicons/react/outline'
+import {CameraIcon, ChevronDoubleRightIcon, VideoCameraIcon} from "@heroicons/react/solid";
 import {db,storage} from '../firebase'
 
 
@@ -86,7 +86,7 @@ const InputBox = () => {
     </div>
     <div className="flex justify-evenly p-3 border-t">
 
-    <div className="inputIcon hidden md:block" >
+    <div className="inputIcon hidden md:flex" >
     <VideoCameraIcon className="h-7 text-red-500" />
     <p className="text-xs sm:text-sm xl:text-base">
       Live Video
@@ -106,6 +106,13 @@ const InputBox = () => {
     <EmojiHappyIcon className="h-7 text-yellow-300" />
     <p className="text-xs sm:text-sm xl:text-base">
       Feeling/Activity </p>
+    </div>
+    <div onClick={sendPost} className="inputIcon flex md:hidden bg-blue-500" >
+    <p className="text-base sm:text-sm xl:text-base text-white">
+      Post
+    </p>
+    {/* <ChevronDoubleRightIcon className="h-7 text-white" /> */}
+
     </div>
       </div>
     </div>
